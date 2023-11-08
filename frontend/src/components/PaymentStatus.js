@@ -14,20 +14,20 @@ const PaymentStatus = () => {
 
             return (
                 <div>
-                    <h3 className="text-success">Payment was Successfull</h3>
+                    <h3 className="text-success">Төлбөр амжилттай болсон</h3>
                     <Card className="p-3">
-                        Successfully bought
+                    Амжилттай худалдаж авлаа
                         <br />
                         <span className="mb-2" style={{ display: "flex" }}>
                             {boughtData.name},
                             ₹{boughtData.price} <i className="text-primary ml-1 mt-1 fas fa-check-circle"></i>
                         </span>
-                        <Link to="/all-orders/">Go to orders page</Link>
+                        <Link to="/all-orders/">Захиалгын хуудас руу очно уу</Link>
                     </Card>
                 </div>
             )
         } catch (error) {
-            return <Message variant='info'>Payment status not available.</Message>
+            return <Message variant='info'>Төлбөрийн төлөв байхгүй байна.</Message>
         }
     }
 

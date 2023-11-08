@@ -28,7 +28,7 @@ function NavBar() {
             <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
                 <Container>
                     <LinkContainer to="/">
-                        <Navbar.Brand><i className="mb-2 fas fa-home"> Home</i></Navbar.Brand>
+                        <Navbar.Brand><i className="mb-2 fas fa-home"> Нүүр</i></Navbar.Brand>
                     </LinkContainer>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
@@ -36,14 +36,14 @@ function NavBar() {
 
                             {/* All Products */}
                             <LinkContainer to="/">
-                                <Nav.Link >All Products</Nav.Link>
+                                <Nav.Link >Бүх бүтээгдэхүүн</Nav.Link>
                             </LinkContainer>
 
                             {/* New Product (Admins Only) */}
 
                             {userInfo && userInfo.admin ?
                                 <LinkContainer to="/new-product/">
-                                    <Nav.Link >Add Product</Nav.Link>
+                                    <Nav.Link >Бүтээгдэхүүн нэмэх</Nav.Link>
                                 </LinkContainer>
                                 : ""
                             }
@@ -60,26 +60,26 @@ function NavBar() {
                             <div>
                                 <NavDropdown className="navbar-nav text-capitalize" title={userInfo.username} id='username'>
                                     <LinkContainer to="/account">
-                                        <NavDropdown.Item>Account Settings</NavDropdown.Item>
+                                        <NavDropdown.Item>Бүртгэлийн тохиргоо</NavDropdown.Item>
                                     </LinkContainer>
                                     <LinkContainer to="/all-addresses/">
-                                        <NavDropdown.Item>Address Settings</NavDropdown.Item>
+                                        <NavDropdown.Item>Хаягийн тохиргоо</NavDropdown.Item>
                                     </LinkContainer>
                                     <LinkContainer to="/stripe-card-details/">
-                                        <NavDropdown.Item>Card Settings</NavDropdown.Item>
+                                        <NavDropdown.Item>Картын тохиргоо</NavDropdown.Item>
                                     </LinkContainer>
                                     <LinkContainer to="/all-orders/">
-                                        <NavDropdown.Item>All Orders</NavDropdown.Item>
+                                        <NavDropdown.Item>Бүх захиалга</NavDropdown.Item>
                                     </LinkContainer>
                                     <NavDropdown.Item onClick={logoutHandler}>
-                                        Logout
+                                        Гарах
                                     </NavDropdown.Item>
                                 </NavDropdown>
                             </div>
                             :
 
                             <LinkContainer to="/login">
-                                <Nav.Link><i className="fas fa-user"></i> Login</Nav.Link>
+                                <Nav.Link><i className="fas fa-user"></i> Нэвтрэх</Nav.Link>
                             </LinkContainer>
                         }
                     </Navbar.Collapse>

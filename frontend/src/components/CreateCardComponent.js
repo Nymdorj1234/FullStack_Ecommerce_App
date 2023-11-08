@@ -91,10 +91,10 @@ const CreateCardComponent = ({ stripeCards, addressSelected }) => {
                             onClick={() => setCardDetails(false)}
                             className="btn btn-outline-danger btn-sm button-focus-css"
                             style={{ float: "right", position: "relative", "top": "-40px" }}>
-                            close
+                            хаах
                         </button>
-                        <p><b>Exp Month:</b> {cardData.exp_month}</p>
-                        <p><b>Exp Year:</b> {cardData.exp_year}</p>                       
+                        <p><b>Дуусах сар:</b> {cardData.exp_month}</p>
+                        <p><b>Дуусах жил:</b> {cardData.exp_year}</p>                       
                     </div>
                 )
             }
@@ -107,7 +107,7 @@ const CreateCardComponent = ({ stripeCards, addressSelected }) => {
 
     // reload the webpage after new card deletion
     if (success) {
-        alert("Card successfully deleted.")
+        alert("Картыг амжилттай устгалаа.")
         window.location.reload()
 
     }
@@ -132,7 +132,7 @@ const CreateCardComponent = ({ stripeCards, addressSelected }) => {
             {loading
                 &&
                 <span style={{ display: "flex" }}>
-                    <h5>Deleting card</h5>
+                    <h5>Карт устгаж байна</h5>
                     <span className="ml-2">
                         <Spinner animation="border" />
                     </span>
@@ -155,35 +155,35 @@ const CreateCardComponent = ({ stripeCards, addressSelected }) => {
 
                         {differentCard ?
                             <Form.Group>
-                                <Form.Label><b>Card Holder Email Address</b></Form.Label>
+                                <Form.Label><b>Карт эзэмшигчийн имэйл хаяг</b></Form.Label>
                                 <Form.Control
                                     autoFocus={true}
                                     type="email"
                                     pattern=".+@gmail\.com"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    placeholder="Email address linked with the Card" />
+                                    placeholder="Карттай холбогдсон имэйл хаяг" />
                             </Form.Group>
                             :
-                            <span><b>Default Customer Email: </b>{userInfo.email}</span>
+                            <span><b>Хэрэглэгчийн өгөгдмөл имэйл: </b>{userInfo.email}</span>
                         }
                         <p>
                             <Link to="#" onClick={() => {
                                 setDifferentCard(!differentCard)
                                 setEmail("")
                             }}>
-                                {differentCard ? "Use Your default Email" : "Use a different Card"}
+                                {differentCard ? "Өгөгдмөл имэйлээ ашигла" : "Өөр карт ашигла"}
                             </Link>
                         </p>
 
                         <Form.Group className="mb-3">
-                            <Form.Label><b>Card Number</b></Form.Label>
+                            <Form.Label><b>Картны дугаар</b></Form.Label>
                             <Form.Control
                                 type="text"
                                 pattern="[0-9]+"
                                 value={cardNumber}
                                 onChange={(e) => setCardNumber(e.target.value)}
-                                placeholder="Enter Your Card Number" maxLength="16"
+                                placeholder="Картын дугаараа оруулна уу" maxLength="16"
                                 required
                             />
                         </Form.Group>
@@ -192,7 +192,7 @@ const CreateCardComponent = ({ stripeCards, addressSelected }) => {
 
                             <Col>
                                 <Form.Group className="mb-3">
-                                    <Form.Label><b>Exp Month</b></Form.Label>
+                                    <Form.Label><b>Дуусах сар</b></Form.Label>
                                     <select
                                         className="form-control"
                                         defaultValue={expMonth}
@@ -212,7 +212,7 @@ const CreateCardComponent = ({ stripeCards, addressSelected }) => {
 
                             <Col>
                                 <Form.Group className="mb-3">
-                                    <Form.Label><b>Exp Year</b></Form.Label>
+                                    <Form.Label><b>Дуусах жил</b></Form.Label>
                                     <select className="form-control"
                                         defaultValue={expYear}
                                         onChange={e => setExpYear(e.target.value)}
@@ -228,7 +228,7 @@ const CreateCardComponent = ({ stripeCards, addressSelected }) => {
 
                             <Col>
                                 <Form.Group className="mb-3">
-                                    <Form.Label><b>CVC Number</b></Form.Label>
+                                    <Form.Label><b>CVC дугаар</b></Form.Label>
                                     <Form.Control
                                         type="numbers"
                                         onChange={(e) => setCvc(e.target.value)}
@@ -251,12 +251,12 @@ const CreateCardComponent = ({ stripeCards, addressSelected }) => {
                                     value={differentCard ? false : saveCard}
                                     onChange={() => setSaveCard(!saveCard)}
                                 />
-                                <span hidden={differentCard} className="ml-1">Save my card for future payments</span>
+                                <span hidden={differentCard} className="ml-1">Цаашдын төлбөрт зориулж миний картыг хадгалаарай</span>
                             </span>
                         </Form.Text>
 
                         <Button className="btn-sm button-focus-css" variant="primary" type="submit">
-                            Submit
+                        Илгээх
                         </Button>
                     </Form>
                     : ""}
@@ -264,14 +264,14 @@ const CreateCardComponent = ({ stripeCards, addressSelected }) => {
             </div>
 
             <div className="my-4 card px-4 py-4">
-                <h5>Saved card</h5>
+                <h5>Хадгалсан карт</h5>
                 {stripeCards.length > 0 ?
                     stripeCards.map(cardData => (
                         <div key={cardData.id}>
                             <Card
                                 style={{ border: "1px solid", borderColor: "#C6ACE7" }}
                                 className="p-2">
-                                <p><b>Card Number:</b> XXXX XXXX XXXX {cardData.card_number.slice(12,18)}</p>
+                                <p><b>Картны дугаар:</b> XXXX XXXX XXXX {cardData.card_number.slice(12,18)}</p>
                                 <div>
                                     {showCardDetails(cardData)}
                                     <button onClick={() => {
@@ -279,11 +279,11 @@ const CreateCardComponent = ({ stripeCards, addressSelected }) => {
                                         setCardDetailsId(cardData.id)
                                     }} className="btn btn-sm btn-outline-primary button-focus-css"
                                     >
-                                        Show Card Details
+                                        Картын дэлгэрэнгүй мэдээллийг харуулах
                                     </button>
                                     <button onClick={() => payWithSavedCard(cardData)}
                                         className="ml-2 btn btn-sm btn-outline-primary button-focus-css">
-                                        Pay with this Card
+                                        Энэ картаар төлбөрөө хийнэ үү
                                     </button>
                                 </div>
                             </Card>
@@ -298,7 +298,7 @@ const CreateCardComponent = ({ stripeCards, addressSelected }) => {
                                 ></i>
                             </span>
                         </div>
-                    )) : "No saved card."}
+                    )) : "Хадгалсан карт байхгүй."}
             </div>
         </div>
     )

@@ -18,8 +18,8 @@ function Product({ product }) {
                         </Card.Title>
                     </Link>
 
-                    <Card.Text as="h3">
-                        ₹ {product.price}
+                    <Card.Text as="h5">
+                        $ {product.price}
                     </Card.Text>
                 </Card.Body>
             </Card>

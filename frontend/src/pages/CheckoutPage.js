@@ -13,6 +13,7 @@ import { checkTokenValidation, logout } from '../actions/userActions'
 import {CHARGE_CARD_RESET} from '../constants/index'
 
 const CheckoutPage = ({ match }) => {
+    document.title = 'Төлбөрийн хэсэг';
 
     let history = useHistory()
 
@@ -61,7 +62,7 @@ const CheckoutPage = ({ match }) => {
         }
     }, [dispatch, match, history, success, userInfo])
 
-    if (userInfo && tokenError === "Request failed with status code 401") {
+    if (userInfo && tokenError === "401 статус кодтой хүсэлт амжилтгүй боллоо") {
         alert("Session expired, please login again.")
         dispatch(logout())
         history.push("/login")
@@ -74,14 +75,14 @@ const CheckoutPage = ({ match }) => {
             {loading
                 &&
                 <span style={{ display: "flex" }}>
-                    <h5>Getting Checkout Info</h5>
+                    <h5>Тооцооны мэдээлэл авч байна</h5>
                     <span className="ml-2">
                         <Spinner animation="border" />
                     </span>
                 </span>}
             {!loading && cardCreationLoading ?
                 <span style={{ display: "flex" }}>
-                    <h5>Checking your card</h5>
+                    <h5>Таны картыг шалгаж байна</h5>
                     <span className="ml-2">
                         <Spinner animation="border" />
                     </span>
@@ -90,7 +91,7 @@ const CheckoutPage = ({ match }) => {
                 <Container>
                     <Row>
                         <Col xs={6}>
-                            <h3>Checkout Summary</h3>
+                            <h3>Тооцооны хураангуй</h3>
                             <Card className="mb-4">
                                 <Card.Body>
                                     <Container>
@@ -102,7 +103,7 @@ const CheckoutPage = ({ match }) => {
                                                 <h5 className="card-title text-capitalize">
                                                     {product.name}
                                                 </h5>
-                                                <span className="card-text text-success">₹ {product.price}</span>
+                                                <span className="card-text text-success">$ {product.price}</span>
                                             </Col>
                                         </Row>
                                     </Container>
@@ -110,19 +111,19 @@ const CheckoutPage = ({ match }) => {
                             </Card>
 
                             <span style={{ display: "flex" }}>
-                                <h3>Billing Address</h3>
+                                <h3>Тооцооны хаяг</h3>
                                 <Link
                                     className="ml-2 mt-2"
                                     to="/all-addresses/"
                                 >
-                                    Edit/Add Address
+                                    Хаяг засах/нэмэх
                                 </Link>
                             </span>
                             <UserAddressComponent handleAddressId={handleAddressId} />
                         </Col>
                         <Col xs={6}>
                             <h3>
-                                Payments Section
+                            Төлбөрийн хэсэг
                             </h3>
                             {success ?
                                 <ChargeCardComponent

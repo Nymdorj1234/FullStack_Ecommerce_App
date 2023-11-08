@@ -77,8 +77,8 @@ const AddressUpdatePage = ({ match }) => {
 
     return (
         <div>
-            <p className="text-center text-info"><em>Update Address</em></p>
-            {errorFetchingAddress && <h3>Invalid Address Request</h3>}
+            <p className="text-center text-info"><em>Хаяг шинэчлэх</em></p>
+            {errorFetchingAddress && <h3>Хүчингүй хаягийн хүсэлт</h3>}
             <Card
                 className="mx-auto mb-4"
                 style={{ width: "50%", border: "1px solid", borderColor: "#C6ACE7" }}
@@ -88,12 +88,12 @@ const AddressUpdatePage = ({ match }) => {
 
                         <Form.Group controlId='name'>
                             <Form.Label>
-                                Name
+                                Нэр
                             </Form.Label>
                             <Form.Control
                                 autoFocus={true}
                                 type="text"
-                                placeholder="enter your name"
+                                placeholder="Нэрээ оруулна уу"
                                 defaultValue={address ? address.name : ""}
                                 onChange={(e) => setName(e.target.value)}
                             >
@@ -102,11 +102,11 @@ const AddressUpdatePage = ({ match }) => {
 
                         <Form.Group controlId='phoneNumber'>
                             <Form.Label>
-                                Phone Number
+                            Утасны дугаар
                             </Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="phone number"
+                                placeholder="Утасны дугаар"
                                 pattern="[0-9]+"
                                 maxLength="10"
                                 defaultValue={address ? address.phone_number : ""}
@@ -117,11 +117,11 @@ const AddressUpdatePage = ({ match }) => {
 
                         <Form.Group controlId='pinCode'>
                             <Form.Label>
-                                Pin Code
+                            PIN код
                             </Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="pin code"
+                                placeholder="PIN код"
                                 defaultValue={address ? address.pin_code : ""}
                                 pattern="[0-9]+"
                                 maxLength="6"
@@ -132,11 +132,11 @@ const AddressUpdatePage = ({ match }) => {
 
                         <Form.Group controlId='houseNumber'>
                             <Form.Label>
-                                House No./Address
+                            Байшингийн дугаар/хаяг
                             </Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="house number"
+                                placeholder="Байшингийн дугаар/хаяг"
                                 defaultValue={address ? address.house_no : ""}
                                 onChange={(e) => setHouseNumber(e.target.value)}
                             >
@@ -145,11 +145,11 @@ const AddressUpdatePage = ({ match }) => {
 
                         <Form.Group controlId='landmark'>
                             <Form.Label>
-                                Landmark
+                            Газрын тэмдэг
                             </Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="landmark"
+                                placeholder="Газрын тэмдэг"
                                 defaultValue={address ? address.landmark : ""}
                                 onChange={(e) => setLandmark(e.target.value)}
                             >
@@ -158,11 +158,11 @@ const AddressUpdatePage = ({ match }) => {
 
                         <Form.Group controlId='city'>
                             <Form.Label>
-                                City
+                            Хот
                             </Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="city"
+                                placeholder="Хот"
                                 defaultValue={address ? address.city : ""}
                                 onChange={(e) => setCity(e.target.value)}
                             >
@@ -171,11 +171,11 @@ const AddressUpdatePage = ({ match }) => {
 
                         <Form.Group controlId='state'>
                             <Form.Label>
-                                State
+                            муж
                             </Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="state"
+                                placeholder="муж"
                                 defaultValue={address ? address.state : ""}
                                 onChange={(e) => setState(e.target.value)}
                             >
@@ -189,7 +189,7 @@ const AddressUpdatePage = ({ match }) => {
                             type="submit"
                             variant="success"
                         >
-                            Save Changes
+                            Өөрчлөлтүүдийг хадгалах
                         </Button>
 
                         <Button
@@ -198,7 +198,7 @@ const AddressUpdatePage = ({ match }) => {
                             variant="primary"
                             onClick={() => history.push("/all-addresses/")}
                         >
-                            Cancel
+                            Цуцлах
                         </Button>
 
 

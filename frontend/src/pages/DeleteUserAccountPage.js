@@ -47,26 +47,26 @@ function DeleteUserAccount() {
         <div>
             <Row className='justify-content-md-center'>
                 <Col xs={12} md={6}>
-                    <h3>Confirm your password to delete your account.</h3>
-                    {loading && <span style = {{ display: "flex" }}><h5>Please wait</h5><span className = "ml-2"><Spinner animation="border" /></span></span>}                    
-                    {error && <Message variant='danger'>Incorrect Password!</Message>}        
+                    <h3>Бүртгэлээ устгахын тулд нууц үгээ баталгаажуулна уу.</h3>
+                    {loading && <span style = {{ display: "flex" }}><h5>Хүлээгээрэй</h5><span className = "ml-2"><Spinner animation="border" /></span></span>}                    
+                    {error && <Message variant='danger'>Нууц үг буруу!</Message>}        
                     <div className="mt-4">
                         <Form onSubmit={onSubmit}>
                             <Form.Group controlId='password'>
                                 <Form.Label>
-                                    Password
+                                Нууц үг
                             </Form.Label>
                                 <Form.Control
                                     required
                                     type="password"
-                                    placeholder="enter your password"
+                                    placeholder="нууц үгээ оруулна уу"
                                     value={myPassword}
                                     onChange={(e) => setMyPassword(e.target.value)}
                                 >
                                 </Form.Control>
                             </Form.Group>
 
-                            <Button type="submit" variant="danger">Confirm Delete</Button>
+                            <Button type="submit" variant="danger">Устгахаа баталгаажуулна уу</Button>
                         </Form>
                     </div>
                 </Col>

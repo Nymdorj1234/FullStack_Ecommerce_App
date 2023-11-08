@@ -94,19 +94,19 @@ function AllAddressesOfUserPage() {
                             <Modal.Title>
                                 <i style={{ color: "#e6e600" }} className="fas fa-exclamation-triangle"></i>
                                 {" "}
-                                Delete Confirmation
+                                Баталгаажуулалтыг устгах
                             </Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
-                            Are you sure you want to delete this address
+                        Та энэ хаягийг устгахдаа итгэлтэй байна уу
                             {" "}<em>"{deleteAddress.house_no}, {deleteAddress.city}, {deleteAddress.state}"</em>?
                         </Modal.Body>
                         <Modal.Footer>
                             <Button variant="danger" onClick={() => confirmDelete(deleteAddress.id)}>
-                                Confirm Delete
+                            Устгахаа баталгаажуулна уу
                             </Button>
                             <Button variant="primary" onClick={handleClose}>
-                                Cancel
+                            Цуцлах
                             </Button>
                         </Modal.Footer>
                     </Modal>
@@ -118,7 +118,7 @@ function AllAddressesOfUserPage() {
             {/* loading spinner conditions */}
 
             {loadingAllAddresses && <span style={{ display: "flex" }}>
-                <h5>Getting addresses</h5>
+                <h5>Хаяг авч байна</h5>
                 <span className="ml-2">
                     <Spinner animation="border" />
                 </span>
@@ -134,7 +134,7 @@ function AllAddressesOfUserPage() {
                     className="btn btn-sm btn-primary mb-2 button-focus-css"
                     onClick={() => toggleCreateAddress()}
                 >
-                    Add new address +
+                   Шинэ хаяг нэмэх +
                 </button>
             }
 
@@ -147,10 +147,10 @@ function AllAddressesOfUserPage() {
                         key={address.id}
 
                     >
-                        <span><b>Name: </b>{address.name}</span>
-                        <span><b>Phone No: </b>+91 {address.phone_number}</span>
-                        <span><b>Address: </b>{address.house_no},
-                            near {address.landmark}, {address.city}, {address.state},
+                        <span><b>Нэр: </b>{address.name}</span>
+                        <span><b>Утасны дугаар: </b>+979 {address.phone_number}</span>
+                        <span><b>Хаяг: </b>{address.house_no},
+                        ойролцоо {address.landmark}, {address.city}, {address.state},
                             {address.pin_code}
 
                             {/* Delete Address Buttton */}

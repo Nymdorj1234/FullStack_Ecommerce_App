@@ -61,10 +61,10 @@ const ChargeCardComponent = ({ product, match, selectedAddressId, addressSelecte
         <div>
             {chargeError ? <Message variant="danger">{chargeError}</Message> : ""}
             <span className="text-info">
-                <h5>Confirm payment</h5>
+                <h5>Төлбөрийг баталгаажуулна уу</h5>
             </span>
             <div className="mb-2">
-                Using Card: XXXX XXXX XXXX {cardData.card_data.last4}
+            Карт ашиглах: XXXX XXXX XXXX {cardData.card_data.last4}
             </div>
             <Form onSubmit={onSubmit}>
 
@@ -77,7 +77,7 @@ const ChargeCardComponent = ({ product, match, selectedAddressId, addressSelecte
                             role="status"
                             aria-hidden="true"
                         />
-                        {" "}Processing Payment...
+                        {" "}Төлбөрийг боловсруулж байна...
                     </Button>
                     :
                     <Button variant="primary" type="submit" style={{ width: "100%" }}>
@@ -93,22 +93,22 @@ const ChargeCardComponent = ({ product, match, selectedAddressId, addressSelecte
                 {address ?
                     <div>
                         <span className="text-info">
-                            <b><em>Will be delievered at this address</em></b>
+                            <b><em>Энэ хаягаар хүргэж өгнө</em></b>
                         </span>
                         <p></p>
-                        <p><b>Name: </b>{address ? address.name : ""}</p>
-                        <p><b>Phone Number: </b>{address ? address.phone_number : ""}</p>
-                        <p><b>House Number: </b>{address ? address.house_no : ""}</p>
-                        <p><b>Landmark: </b>{address ? address.landmark : ""}</p>
-                        <p><b>City: </b>{address ? address.city : ""}</p>
-                        <p><b>State: </b>{address ? address.state : ""}</p>
-                        <p><b>Pin Code/Zip Code: </b>{address ? address.pin_code : ""}</p>
+                        <p><b>Нэр: </b>{address ? address.name : ""}</p>
+                        <p><b>Утасны дугаар: </b>{address ? address.phone_number : ""}</p>
+                        <p><b>Байшин дугаар: </b>{address ? address.house_no : ""}</p>
+                        <p><b>Газрын тэмдэг: </b>{address ? address.landmark : ""}</p>
+                        <p><b>Хот: </b>{address ? address.city : ""}</p>
+                        <p><b>муж: </b>{address ? address.state : ""}</p>
+                        <p><b>PIN код/Zip Code: </b>{address ? address.pin_code : ""}</p>
                     </div>
                     :
                     ""
                 }
             </Card>
-            <Link to="#" onClick={() => window.location.reload()}>Select a different card to pay</Link>
+            <Link to="#" onClick={() => window.location.reload()}>Төлбөр хийх өөр карт сонгоно уу</Link>
 
         </div >
     )

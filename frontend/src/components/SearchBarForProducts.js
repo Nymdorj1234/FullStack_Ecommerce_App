@@ -3,6 +3,7 @@ import {useHistory} from 'react-router-dom'
 
 
 function SearchBarForProducts() {
+    document.title = 'Хайлт';
 
     let history = useHistory()
     const [searchTerm, setSearchTerm] = useState("")
@@ -24,7 +25,7 @@ function SearchBarForProducts() {
                     <input
                         type="text"
                         value={searchTerm}
-                        placeholder="search products"
+                        placeholder="Бүтээгдэхүүн хайх"
                         className="form-control"
                         onChange={(e) => setSearchTerm(e.target.value)}
                     />

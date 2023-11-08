@@ -72,14 +72,14 @@ const ProductCreatePage = () => {
             <span
                 className="d-flex justify-content-center text-info"
                 >
-                <em>New Product</em>
+                <em>Шинэ бүтээгдэхүүн</em>
             </span>
             <Form onSubmit={onSubmit}>
 
                 <Form.Group controlId='name'>
                     <Form.Label>
                         <b>
-                            Product Name
+                        Бүтээгдэхүүний нэр
                         </b>
                     </Form.Label>
                     <Form.Control
@@ -87,7 +87,7 @@ const ProductCreatePage = () => {
                         autoFocus={true}
                         type="text"
                         value={name}
-                        placeholder="product name"
+                        placeholder="Бүтээгдэхүүний нэр"
                         onChange={(e) => setName(e.target.value)}
                     >
                     </Form.Control>
@@ -96,14 +96,14 @@ const ProductCreatePage = () => {
                 <Form.Group controlId='description'>
                     <Form.Label>
                         <b>
-                            Product Description
+                        Бүтээгдэхүүний тодорхойлолт
                         </b>
                     </Form.Label>
                     <Form.Control
                         required
                         type="text"
                         value={description}
-                        placeholder="product description"
+                        placeholder="Бүтээгдэхүүний тодорхойлолт"
                         onChange={(e) => setDescription(e.target.value)}
                     >
                     </Form.Control>
@@ -112,7 +112,7 @@ const ProductCreatePage = () => {
                 <Form.Group controlId='price'>
                     <Form.Label>
                         <b>
-                            Price
+                            Үнэ
                         </b>
                     </Form.Label>
                     <Form.Control
@@ -129,7 +129,7 @@ const ProductCreatePage = () => {
                 </Form.Group>
 
                 <span style={{ display: "flex" }}>
-                    <label>In Stock</label>
+                    <label>Нөөцөд байна</label>
                     <input
                         type="checkbox"
                         value={stock}
@@ -141,7 +141,7 @@ const ProductCreatePage = () => {
                 <Form.Group controlId='image'>
                     <Form.Label>
                         <b>
-                            Product Image
+                        Бүтээгдэхүүний зураг
                         </b>
                     </Form.Label>
                     <Form.Control
@@ -157,7 +157,7 @@ const ProductCreatePage = () => {
                     variant='success'
                     className="btn-sm button-focus-css"
                 >
-                    Save Product
+                    Бүтээгдэхүүнийг хадгалах
                 </Button>
                 <Button
                     type="submit"
@@ -165,7 +165,7 @@ const ProductCreatePage = () => {
                     className="btn-sm ml-2 button-focus-css"
                     onClick={() => history.push("/")}
                 >
-                    Cancel
+                    Цуцлах
                 </Button>
             </Form>
         </div>

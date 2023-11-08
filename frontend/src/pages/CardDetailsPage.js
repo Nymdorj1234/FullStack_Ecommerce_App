@@ -67,7 +67,7 @@ const CardDetailsPage = () => {
     return (
         <div>
             {loading && <span style={{ display: "flex" }}>
-                <h5>Getting Card Information</h5>
+                <h5>Картын мэдээлэл авах</h5>
                 <span className="ml-2">
                     <Spinner animation="border" />
                 </span>
@@ -89,7 +89,7 @@ const CardDetailsPage = () => {
                 <div key={idx}>
                     <Container>
                         <Row className="mr-6 mb-2 border border-dark">
-                            <Col xs={2} className="p-3 bg-info text-white">Name on Card:</Col>
+                            <Col xs={2} className="p-3 bg-info text-white">Картан дээрх нэр:</Col>
                             <Col className="p-3">
                                 {each.name_on_card ? <span>
                                     {each.name_on_card}
@@ -99,32 +99,32 @@ const CardDetailsPage = () => {
 
                         </Row>
                         <Row className="mb-2 border border-dark">
-                            <Col xs={2} className="p-3 bg-info text-white">Exp Month:</Col>
+                            <Col xs={2} className="p-3 bg-info text-white">Дуусах сар:</Col>
                             <Col className="p-3">{each.exp_month ? each.exp_month : "Not Set"}</Col>
                         </Row>
                         <Row className="mb-2 border border-dark">
-                            <Col xs={2} className="p-3 bg-info text-white">Exp Year:</Col>
+                            <Col xs={2} className="p-3 bg-info text-white">Дуусах жил:</Col>
                             <Col className="p-3">{each.exp_year ? each.exp_year : "Not Set"}</Col>
                         </Row>
                         <Row className="mr-6 mb-2 border border-dark">
-                            <Col xs={2} className="p-3 bg-info text-white">Address City:</Col>
+                            <Col xs={2} className="p-3 bg-info text-white">Хаяг Хот:</Col>
                             <Col className="p-3">{each.address_city ? each.address_city : "Not Set"}</Col>
                         </Row>
                         <Row className="mb-2 border border-dark">
-                            <Col xs={2} className="p-3 bg-info text-white">Address Country:</Col>
+                            <Col xs={2} className="p-3 bg-info text-white">Хаяг улс:</Col>
                             <Col className="p-3">{each.address_country ? each.address_country : "Not Set"}</Col>
                         </Row>
                         <Row className="mb-2 border border-dark">
-                            <Col xs={2} className="p-3 bg-info text-white">Address State:</Col>
+                            <Col xs={2} className="p-3 bg-info text-white">Хаягийн муж:</Col>
                             <Col className="p-3">{each.address_state ? each.address_state : "Not Set"}</Col>
                         </Row>
                         <Row className="mb-2 border border-dark">
-                            <Col xs={2} className="p-3 bg-info text-white">Address Zip:</Col>
+                            <Col xs={2} className="p-3 bg-info text-white">Хаяг Zip:</Col>
                             <Col className="p-3">{each.address_zip ? each.address_zip : "Not Set"}</Col>
                         </Row>
                     </Container>
                     <span style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                        <Link to="/stripe-card-update/">Update Card details</Link>
+                        <Link to="/stripe-card-update/">Картын дэлгэрэнгүй мэдээллийг шинэчлэх</Link>
                         <span className="ml-1 text-primary">| </span>
                         <span className="ml-1"></span>
 
@@ -134,12 +134,12 @@ const CardDetailsPage = () => {
                                 setUserId(each.user)
                                 setRunCardDeleteHandler(!runCardDeleteHandler)
                             }}
-                        >Delete Card</Link>
+                        >Карт устгах</Link>
                     </span>
                 </div>
             )) :
                 <div>
-                    <Message variant='info'>Card details not available.</Message>
+                    <Message variant='info'>Картын дэлгэрэнгүй мэдээлэл байхгүй байна.</Message>
                 </div>
             }
         </div>

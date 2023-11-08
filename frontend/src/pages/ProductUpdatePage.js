@@ -94,7 +94,7 @@ const ProductUpdatePage = ({ match }) => {
             <span
                 className="d-flex justify-content-center text-info"
             >
-                <em>Edit Product</em>
+                <em>Бүтээгдэхүүнийг засах</em>
             </span>
             {productUpdationError ? (
                 <div>
@@ -103,13 +103,13 @@ const ProductUpdatePage = ({ match }) => {
                 </div>
             ) : ""}
             {loadingPageDetails && <span style={{ display: "flex" }}>
-                <h5>Getting Product Details</h5>
+                <h5>Бүтээгдэхүүний дэлгэрэнгүй мэдээллийг авах</h5>
                 <span className="ml-2">
                     <Spinner animation="border" />
                 </span>
             </span>}
             {loadingProductUpdations ? <span style={{ display: "flex" }}>
-                <h5>Updating Product</h5>
+                <h5>Бүтээгдэхүүнийг шинэчилж байна</h5>
                 <span className="ml-2">
                     <Spinner animation="border" />
                 </span>
@@ -119,7 +119,7 @@ const ProductUpdatePage = ({ match }) => {
                 <Form.Group controlId='image'>
                     <Form.Label>
                         <b>
-                            Product Image
+                        Бүтээгдэхүүний зураг
                         </b>
                     </Form.Label>
                     <p>
@@ -144,7 +144,7 @@ const ProductUpdatePage = ({ match }) => {
                                 }}
                                 className="btn btn-primary btn-sm mt-2"
                             >
-                                Cancel
+                                Цуцлах
                             </span>
                         </div>
                         :
@@ -153,7 +153,7 @@ const ProductUpdatePage = ({ match }) => {
                                 onClick={() => setNewImage(!newImage)}
                                 className="btn btn-success btn-sm"
                             >
-                                choose different image
+                                өөр зураг сонгох
                             </span>
                         </p>
                     }
@@ -162,14 +162,14 @@ const ProductUpdatePage = ({ match }) => {
                 <Form.Group controlId='name'>
                     <Form.Label>
                         <b>
-                            Product Name
+                        Бүтээгдэхүүний нэр
                         </b>
                     </Form.Label>
                     <Form.Control
                         autoFocus={true}
                         type="text"
                         defaultValue={product.name}
-                        placeholder="product name"
+                        placeholder="Бүтээгдэхүүний нэр"
                         onChange={(e) => setName(e.target.value)}
                     >
                     </Form.Control>
@@ -178,13 +178,13 @@ const ProductUpdatePage = ({ match }) => {
                 <Form.Group controlId='description'>
                     <Form.Label>
                         <b>
-                            Product Description
+                        Бүтээгдэхүүний тодорхойлолт
                         </b>
                     </Form.Label>
                     <Form.Control
                         type="text"
                         defaultValue={product.description}
-                        placeholder="product description"
+                        placeholder="Бүтээгдэхүүний тодорхойлолт"
                         onChange={(e) => setDescription(e.target.value)}
                     >
                     </Form.Control>
@@ -193,14 +193,14 @@ const ProductUpdatePage = ({ match }) => {
                 <Form.Group controlId='price'>
                     <Form.Label>
                         <b>
-                            Price
+                            Үнэ
                         </b>
                     </Form.Label>
                     <Form.Control
                         type="text"
                         pattern="[0-9]+(\.[0-9]{1,2})?%?"
                         defaultValue={product.price}
-                        placeholder="199.99"
+                        placeholder="100.000"
                         step="0.01"
                         maxLength="8"
                         onChange={(e) => setPrice(e.target.value)}
@@ -209,7 +209,7 @@ const ProductUpdatePage = ({ match }) => {
                 </Form.Group>
 
                 <span style={{ display: "flex" }}>
-                    <label>In Stock</label>
+                    <label>Нөөцөд байна</label>
                     <input
                         type="checkbox"
                         defaultChecked={product.stock}
@@ -223,14 +223,14 @@ const ProductUpdatePage = ({ match }) => {
                     variant='success'
                     className="btn-sm button-focus-css mb-4"
                 >
-                    Save Changes
+                   Өөрчлөлтүүдийг хадгалах
                 </Button>
                 <Button
                     onClick={() => history.push(`/product/${product.id}`)}
                     variant='primary'
                     className="btn-sm ml-2 button-focus-css mb-4"
                 >
-                    Cancel
+                    Цуцлах
                 </Button>
             </Form>
         </div>

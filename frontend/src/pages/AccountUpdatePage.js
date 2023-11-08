@@ -75,7 +75,7 @@ function AccountUpdatePage() {
     }
 
     if(success) {
-        alert("Account successfully updated.")
+        alert("Бүртгэлийг амжилттай шинэчилсэн.")
         dispatch({
             type: UPDATE_USER_DETAILS_RESET
         })
@@ -92,20 +92,20 @@ function AccountUpdatePage() {
                             <span
                                 className="d-flex justify-content-center"
                                 style={{ display: "flex", marginBottom: "15px", color: "#008080" }}>
-                                <em>Update User Details</em>
+                                <em>Хэрэглэгчийн мэдээллийг шинэчлэх</em>
                             </span>
                             {loading && <Spinner animation="border" />}
                             <Form onSubmit={onSubmit}>
 
                                 <Form.Group controlId='username'>
                                     <Form.Label>
-                                        Username
+                                        Хэрэглэгчийн Нэр
                                     </Form.Label>
                                     <Form.Control
                                         autoFocus={true}
                                         type="text"
                                         defaultValue={userAccDetails.username}
-                                        placeholder="username"
+                                        placeholder="Хэрэглэгчийн Нэр"
                                         onChange={(e) => setUsername(e.target.value)}
                                     >
                                     </Form.Control>
@@ -113,11 +113,11 @@ function AccountUpdatePage() {
 
                                 <Form.Group controlId='email'>
                                     <Form.Label>
-                                        Email Address
+                                    Имэйл хаяг
                                     </Form.Label>
                                     <Form.Control
                                         type="email"
-                                        placeholder="enter email"
+                                        placeholder="Имэйл хаяг"
                                         defaultValue={userAccDetails.email}
                                         onChange={(e) => setEmail(e.target.value)}
                                     >
@@ -126,11 +126,11 @@ function AccountUpdatePage() {
 
                                 <Form.Group controlId='password'>
                                     <Form.Label>
-                                        Reset-Password
+                                    Нууц үгээ анхны байдалд нь оруулж
                                     </Form.Label>
                                     <Form.Control
                                         type="password"
-                                        placeholder="enter new password"
+                                        placeholder="Нууц үгээ анхны байдалд нь оруулж"
                                         onChange={(e) => setPassword(e.target.value)}
                                     >
                                     </Form.Control>
@@ -138,20 +138,20 @@ function AccountUpdatePage() {
 
                                 <Form.Group controlId='confirmPassword'>
                                     <Form.Label>
-                                        Confirm Password
+                                    Нууц үгээ баталгаажуулна уу
                                     </Form.Label>
                                     <Form.Control
                                         type="password"
-                                        placeholder="confirm new password"
+                                        placeholder="Нууц үгээ баталгаажуулна уу"
                                         onChange={(e) => setConfirmPassword(e.target.value)}
                                     >
                                     </Form.Control>
                                 </Form.Group>
 
-                                <Button type="submit" variant='success' className="btn-sm">Save Changes</Button>
+                                <Button type="submit" variant='success' className="btn-sm">Өөрчлөлтүүдийг хадгалах</Button>
                                 <Link to={`/account`}>
                                     <button className="btn btn-primary btn-sm ml-2" type="button">
-                                        Cancel
+                                    Цуцлах
                                     </button>
                                 </Link>
                             </Form>
@@ -160,9 +160,9 @@ function AccountUpdatePage() {
                 </div>
             )
         } catch (error) {
-            return <Message variant='danger'>Something went wrong, go back to <Link
+            return <Message variant='danger'>Ямар нэг алдаа гарлаа, буцах <Link
                 onClick={logoutHandler} to={`/login`}
-            > Login</Link> page.</Message>
+            > Нэвтрэх</Link> Хуудас.</Message>
         }
     }
 

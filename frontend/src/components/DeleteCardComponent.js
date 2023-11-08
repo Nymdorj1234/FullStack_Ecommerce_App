@@ -24,25 +24,25 @@ function DeleteCardComponent({ userId, deleteCardNumber, runCardDeleteHandler, t
                         <Modal.Title>
                             <i style={{ color: "#e6e600" }} className="fas fa-exclamation-triangle"></i>
                             {" "}
-                            Delete Confirmation
+                            Баталгаажуулалтыг устгах
                         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <p>
                             <b>
-                                Warning!
+                            Анхааруулга!
                             </b>
-                            {" "}deleting your card will delete your stripe account and all its data.
+                            {" "}Картаа устгаснаар таны зурвас болон түүний бүх өгөгдөл устах болно.
                         </p>
-                        Are you sure you want to delete the card "{deleteCardNumber}"?
+                        Та картыг устгахдаа итгэлтэй байна уу "{deleteCardNumber}"?
                     </Modal.Body>
 
                     <Modal.Footer>
                         <Button variant="danger" onClick={() => confirmDelete(deleteCardNumber)}>
-                            Confirm Delete
+                        Устгахаа баталгаажуулна уу
                         </Button>
                         <Button variant="primary" onClick={toggleRunCardDeleteHandler}>
-                            Cancel
+                        Цуцлах
                         </Button>
                     </Modal.Footer>
                 </Modal>

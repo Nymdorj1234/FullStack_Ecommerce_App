@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "proxy": "http://127.0.0.1:8000",
+  "proxy": "http://127.0.0.1:8000/", 
   "private": true,
   "dependencies": {
     "@stripe/react-stripe-js": "^1.4.1",
@@ -24,7 +24,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider  start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -47,4 +47,7 @@
       "last 1 safari version"
     ]
   }
+  
 }
+
+

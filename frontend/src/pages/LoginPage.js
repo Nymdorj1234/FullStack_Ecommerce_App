@@ -31,16 +31,16 @@ function LoginPage({ history }) {
         <div>
             <Row className='justify-content-md-center'>
                 <Col xs={12} md={6}>                    
-                    <h1>Sign In</h1>                    
+                    <h1>Нэвтрэх</h1>                    
                     {error && <Message variant='danger'>{error}</Message>}
                     <Form onSubmit={submitHandler}>
                         <Form.Group controlId='username'>
                             <Form.Label>
-                                Username
+                            Хэрэглэгчийн нэр
                     </Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="enter username"
+                                placeholder="хэрэглэгчийн нэрийг оруулна уу"
                                 value={username}
                                 onChange={(e) => setUsername(e.target.value)}
                             >
@@ -49,26 +49,26 @@ function LoginPage({ history }) {
 
                         <Form.Group controlId='password'>
                             <Form.Label>
-                                Password
+                            Нууц үг
                     </Form.Label>
                             <Form.Control
                                 type="password"
-                                placeholder="enter your password"
+                                placeholder="нууц үгээ оруулна уу"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             >
                             </Form.Control>
                         </Form.Group>
 
-                        <Button type="submit" variant='primary'>Sign In</Button>
+                        <Button type="submit" variant='primary'>Нэвтрэх</Button>
                     </Form>
 
                     <Row className="py-3">
                         <Col>
-                            Do not have an account?
+                        Данс байхгүй юм уу?
                     <Link
                                 to={`/register`}
-                            > Register</Link>
+                            > Бүртгүүлэх</Link>
                         </Col>
                     </Row>
                 </Col>

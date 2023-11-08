@@ -47,7 +47,7 @@ const CreateAddressComponent = ({ toggleCreateAddress }) => {
 
     return (
         <div>
-            <p className="text-center text-info"><em>New Address</em></p>
+            <p className="text-center text-info"><em>Шинэ хаяг</em></p>
             {errorCreatingAddress
                 ? <Message variant='danger'>
                     {errorCreatingAddress}
@@ -63,12 +63,12 @@ const CreateAddressComponent = ({ toggleCreateAddress }) => {
 
                         <Form.Group controlId='name'>
                             <Form.Label>
-                                Name
+                                Нэр
                             </Form.Label>
                             <Form.Control
                                 autoFocus={true}
                                 type="text"
-                                placeholder="enter your name"
+                                placeholder="Нэрээ оруулна уу"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
                             >
@@ -77,13 +77,13 @@ const CreateAddressComponent = ({ toggleCreateAddress }) => {
 
                         <Form.Group controlId='phoneNumber'>
                             <Form.Label>
-                                Phone Number
+                            Утасны дугаар
                             </Form.Label>
                             <InputGroup>
-                                <InputGroup.Text>+91</InputGroup.Text>
+                                <InputGroup.Text>+979</InputGroup.Text>
                                 <Form.Control
                                     type="text"
-                                    placeholder="phone number"
+                                    placeholder="Утасны дугаар"
                                     pattern="[0-9]+"
                                     maxLength="10"
                                     value={phoneNumber}
@@ -95,11 +95,11 @@ const CreateAddressComponent = ({ toggleCreateAddress }) => {
 
                         <Form.Group controlId='pinCode'>
                             <Form.Label>
-                                Pin Code
+                            PIN код
                             </Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="pin code"
+                                placeholder="PIN код"
                                 value={pinCode}
                                 pattern="[0-9]+"
                                 maxLength="6"
@@ -110,11 +110,11 @@ const CreateAddressComponent = ({ toggleCreateAddress }) => {
 
                         <Form.Group controlId='houseNumber'>
                             <Form.Label>
-                                House No./Address
+                            Байшингийн дугаар/хаяг
                             </Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="house number"
+                                placeholder="хаяг"
                                 value={houseNumber}
                                 onChange={(e) => setHouseNumber(e.target.value)}
                             >
@@ -123,11 +123,11 @@ const CreateAddressComponent = ({ toggleCreateAddress }) => {
 
                         <Form.Group controlId='landmark'>
                             <Form.Label>
-                                Landmark
+                            Газрын тэмдэг
                             </Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="landmark"
+                                placeholder="Газрын тэмдэг"
                                 value={landmark}
                                 onChange={(e) => setLandmark(e.target.value)}
                             >
@@ -136,11 +136,11 @@ const CreateAddressComponent = ({ toggleCreateAddress }) => {
 
                         <Form.Group controlId='city'>
                             <Form.Label>
-                                City
+                                Хот
                             </Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="city"
+                                placeholder="Хот"
                                 value={city}
                                 onChange={(e) => setCity(e.target.value)}
                             >
@@ -149,11 +149,11 @@ const CreateAddressComponent = ({ toggleCreateAddress }) => {
 
                         <Form.Group controlId='state'>
                             <Form.Label>
-                                State
+                            муж
                             </Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="state"
+                                placeholder="муж"
                                 value={state}
                                 onChange={(e) => setState(e.target.value)}
                             >
@@ -166,14 +166,14 @@ const CreateAddressComponent = ({ toggleCreateAddress }) => {
                             type="submit"
                             variant="success"
                         >
-                            Save Address
+                            Хаяг хадгалах
                         </Button>
                         <Button
                             style={{ width: "100%" }}
                             className="btn-sm mt-2"
                             variant="primary"
                             onClick={() => toggleCreateAddress()}>
-                            Cancel
+                            Цуцлах
                         </Button>
                     </Form>
 

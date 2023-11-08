@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 const SearchBarForOrdersPage = ({ handleSearchTerm, placeholderValue }) => {
 
     const [searchTerm, setSearchTerm] = useState("")
+    document.title = 'Хайлт';
 
     const onSubmit = (e) => {
         e.preventDefault();

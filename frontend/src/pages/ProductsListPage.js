@@ -9,6 +9,7 @@ import { CREATE_PRODUCT_RESET } from '../constants'
 
 
 function ProductsListPage() {
+    document.title = 'Нүүр хуудас';
 
     let history = useHistory()
     let searchTerm = history.location.search
@@ -29,7 +30,7 @@ function ProductsListPage() {
     const showNothingMessage = () => {
         return (
             <div>
-                {!loading ? <Message variant='info'>Nothing to show</Message> : ""}                
+                {!loading ? <Message variant='info'>Үзүүлэх зүйл алга!</Message> : ""}                
             </div>
         )
     }
@@ -38,9 +39,10 @@ function ProductsListPage() {
         <div>
             {error && <Message variant='danger'>{error}</Message>}
             {loading && <span style={{ display: "flex" }}>
-                <h5>Getting Products</h5>
+                <h5>Бүтээгдэхүүн авах</h5>
                 <span className="ml-2">
                     <Spinner animation="border" />
+                    <>h3bhsi</>
                 </span>
             </span>}
             <div>

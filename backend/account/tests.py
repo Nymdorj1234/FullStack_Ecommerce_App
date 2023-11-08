@@ -61,7 +61,7 @@ class AccountApisSetUp(APITestCase):
             address = "somewhere on earth", 
             paid_status = "True", 
             paid_at = timezone.now(),
-            total_price = "5999.99", 
+            total_price = "6000.99", 
             is_delivered = "False",
             delivered_at = "Not Delivered", 
             user = self.normal_user

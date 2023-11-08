@@ -79,7 +79,7 @@ function OrdersListPage() {
     return (
         <div>
             {loadingOrders && <span style={{ display: "flex" }}>
-                <h5>Getting Orders</h5>
+                <h5>Захиалга авч байна</h5>
                 <span className="ml-2">
                     <Spinner animation="border" />
                 </span>
@@ -89,18 +89,18 @@ function OrdersListPage() {
                 <Table className="mt-2" striped bordered>
                     <thead>
                         <tr className="p-3 bg-info text-white text-center">
-                            <th>Order Id</th>
-                            <th>Customer Name</th>
-                            <th>Card Used</th>
-                            <th>Delivery Address</th>
-                            <th>Ordered Item</th>
-                            <th>Paid Status</th>
-                            <th>Paid On</th>
-                            <th>Total Amount</th>
-                            <th>Delivered Status</th>
-                            <th>Delivered On</th>
+                            <th>Захиалгын дугаар</th>
+                            <th>Хэрэглэгчийн нэр</th>
+                            <th>Ашигласан карт</th>
+                            <th>Хүргэлтийн хаяг</th>
+                            <th>Захиалсан зүйл</th>
+                            <th>Төлбөртэй статус</th>
+                            <th>Төлбөр төлсөн</th>
+                            <th>Нийт дүн</th>
+                            <th>Хүргэгдсэн статус</th>
+                            <th>Хүргэгдсэн өдөр</th>
                             {userInfo.admin &&
-                                <th>Delivery Status</th>
+                                <th>Хүргэлтийн байдал</th>
                             }
                         </tr>
                     </thead>
@@ -174,7 +174,7 @@ function OrdersListPage() {
                         </tbody>
                     ))}
                 </Table>
-                : <Message variant="info">No orders yet.</Message> }
+                : <Message variant="info">Одоогоор захиалга алга.</Message> }
         </div>
     )
 }

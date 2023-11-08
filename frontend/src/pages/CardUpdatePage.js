@@ -100,7 +100,7 @@ const CardUpdatePage = () => {
                     <span
                         className="d-flex justify-content-center"
                         style={{ display: "flex", marginBottom: "15px", color: "#008080" }}>
-                        <em>Update Card Details</em>
+                        <em>Картын дэлгэрэнгүй мэдээллийг шинэчлэх</em>
                     </span>
                     {loading && <Spinner animation="border" />}
                     {stripeCards.map((each, idx) => (
@@ -113,7 +113,7 @@ const CardUpdatePage = () => {
 
                                     <Form.Group controlId='name'>
                                         <Form.Label>
-                                            Name on Card
+                                        Картан дээрх нэр
                                         </Form.Label>
                                         <Form.Control
                                             autoFocus={true}
@@ -127,14 +127,14 @@ const CardUpdatePage = () => {
 
                                     <Form.Group controlId='month'>
                                         <Form.Label>
-                                            Exp Month
+                                        Дуусах сар
                                         </Form.Label>
                                         <Form.Control
                                             type="text"
                                             pattern="[0-9]+"
                                             maxLength="2"
                                             defaultValue={each.exp_month}
-                                            placeholder="exp month"
+                                            placeholder="Дуусах сар"
                                             onChange={(e) => setExpMonth(e.target.value)}
                                         >
                                         </Form.Control>
@@ -142,13 +142,13 @@ const CardUpdatePage = () => {
 
                                     <Form.Group controlId='year'>
                                         <Form.Label>
-                                            Exp Year
+                                        Дуусах жил
                                         </Form.Label>
                                         <Form.Control
                                             type="text"
                                             pattern="[0-9]+"
                                             defaultValue={each.exp_year}
-                                            placeholder="exp year"
+                                            placeholder="Дуусах жил"
                                             maxLength="4"
                                             onChange={(e) => setExpYear(e.target.value)}
                                         >
@@ -157,12 +157,12 @@ const CardUpdatePage = () => {
 
                                     <Form.Group controlId='city'>
                                         <Form.Label>
-                                            Address City
+                                        Хаяг Хот
                                         </Form.Label>
                                         <Form.Control
                                             type="text"
                                             defaultValue={each.address_city}
-                                            placeholder="address city"
+                                            placeholder="Хаяг Хот"
                                             onChange={(e) => setAddressCity(e.target.value)}
                                         >
                                         </Form.Control>
@@ -170,12 +170,12 @@ const CardUpdatePage = () => {
 
                                     <Form.Group controlId='country'>
                                         <Form.Label>
-                                            Address Country
+                                        Хаяг улс
                                         </Form.Label>
                                         <Form.Control
                                             type="text"
                                             defaultValue={each.address_country}
-                                            placeholder="address country"
+                                            placeholder="Хаяг улс"
                                             onChange={(e) => setAddressCountry(e.target.value)}
                                         >
                                         </Form.Control>
@@ -183,12 +183,12 @@ const CardUpdatePage = () => {
 
                                     <Form.Group controlId='state'>
                                         <Form.Label>
-                                            Address State
+                                        Хаягийн муж
                                         </Form.Label>
                                         <Form.Control
                                             type="text"
                                             defaultValue={each.address_state}
-                                            placeholder="address state"
+                                            placeholder="Хаягийн муж"
                                             onChange={(e) => setAddressState(e.target.value)}
                                         >
                                         </Form.Control>
@@ -196,12 +196,12 @@ const CardUpdatePage = () => {
 
                                     <Form.Group controlId='zip'>
                                         <Form.Label>
-                                            Address Zip
+                                        Хаяг Zip
                                         </Form.Label>
                                         <Form.Control
                                             type="text"
                                             defaultValue={each.address_zip}
-                                            placeholder="address zip"
+                                            placeholder="Хаяг Zip"
                                             pattern="[0-9]+"
                                             maxLength="6"
                                             onChange={(e) => setAddressZip(e.target.value)}
@@ -215,7 +215,7 @@ const CardUpdatePage = () => {
                                         onClick={() => setCustomerAndCardIds(each.customer_id, each.card_id, each.card_number)}
                                         style={{ width: "100%" }}
                                         className="btn-sm button-focus-css">
-                                        Save Changes
+                                        Өөрчлөлтүүдийг хадгалах
                                     </Button>
                                     <Button
                                         type="submit"
@@ -223,7 +223,7 @@ const CardUpdatePage = () => {
                                         onClick={() => history.push("/stripe-card-details/")}
                                         style={{ width: "100%" }}
                                         className="btn-sm mt-2 button-focus-css">
-                                        Cancel
+                                        Цуцлах
                                     </Button>
                                 </Form>
                             </Card>

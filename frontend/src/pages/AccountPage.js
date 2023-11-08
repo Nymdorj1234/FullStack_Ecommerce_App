@@ -57,34 +57,34 @@ function AccountPage() {
 
             return (
                 <div>
-                    {loading && <span style = {{ display: "flex" }}><h5>Getting User Information</h5><span className = "ml-2"><Spinner animation="border" /></span></span>}
+                    {loading && <span style = {{ display: "flex" }}><h5>Хэрэглэгчийн мэдээлэл авах</h5><span className = "ml-2"><Spinner animation="border" /></span></span>}
                     <Container>
                         <Row className="mr-6 mb-2 border border-dark">
-                            <Col xs={2} className="p-3 bg-info text-white">Name:</Col>
+                            <Col xs={2} className="p-3 bg-info text-white">Нэр:</Col>
                             <Col className="p-3">{userAccDetails.username}</Col>
                         </Row>
                         <Row className="mb-2 border border-dark">
-                            <Col xs={2} className="p-3 bg-info text-white">Email:</Col>
+                            <Col xs={2} className="p-3 bg-info text-white">Емайл:</Col>
                             <Col className="p-3">{userAccDetails.email}</Col>
                         </Row>
                         <Row className="mb-2 border border-dark">
-                            <Col xs={2} className="p-3 bg-info text-white">Admin Privileges:</Col>
+                            <Col xs={2} className="p-3 bg-info text-white">Админы эрх:</Col>
                             <Col className="p-3">{userAccDetails.admin ? "Yes" : "No"}</Col>
                         </Row>
                     </Container>
                     <span style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                        <Link to={`/account/update`}>Update Account details</Link>
+                        <Link to={`/account/update`}>Бүртгэлийн дэлгэрэнгүй мэдээллийг шинэчлэх</Link>
                         <span className="ml-1 text-primary">| </span>
                         <span className="ml-1"></span>
 
-                        <Link to={`/account/delete/`}>Delete Account</Link>
+                        <Link to={`/account/delete/`}>Бүртгэл устгах</Link>
                     </span>
                 </div>
             )
         } catch (error) {
-            return <Message variant='danger'>Something went wrong, go back to <Link
+            return <Message variant='danger'>Ямар нэг алдаа гарлаа, буцах <Link
                 onClick={logoutHandler} to={`/login`}
-            > Login</Link> page.</Message>
+            > Нэвтрэх</Link> Хуудас.</Message>
         }
     }
 

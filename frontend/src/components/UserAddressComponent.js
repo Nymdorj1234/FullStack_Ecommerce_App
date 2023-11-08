@@ -47,8 +47,8 @@ function UserAddressComponent({ handleAddressId }) {
                             value={0}
                             onClick={() => updatehandleAddressId(address.id)}
                         />                        
-                        <span><b>Name: </b>{address.name}</span>
-                        <span><b>Address: </b>
+                        <span><b>Нэр: </b>{address.name}</span>
+                        <span><b>Хаяг: </b>
                         {address.house_no}, {address.landmark}, {address.city}, 
                         {address.state}, {address.pin_code}</span>
                     </Card>
